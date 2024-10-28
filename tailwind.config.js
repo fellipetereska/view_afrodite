@@ -10,6 +10,7 @@ module.exports = {
       },
       colors: {
         primary: '#7B68EE', // Roxo
+        creme: '#FFF8DC', // Bege
       }, 
     }
   },

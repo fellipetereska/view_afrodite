@@ -14,7 +14,7 @@ const Login = () => {
 
 	const { isAuthenticated, setIsAuthenticated, signin } = useAuth();
 
-	const [isLogin, setIsLogin] = useState(false);
+	const [isLogin, setIsLogin] = useState(true);
 	const [showPasd, setShowPasd] = useState(false);
 
 	const [email, setEmail] = useState('');
@@ -30,6 +30,20 @@ const Login = () => {
 		navigate('/');
 	};
 
+	const handleClear = () => {
+		console.log('teste')
+		setNome('');
+		setEmail('');
+		setPassword('');
+		setPhone('');
+		setLoading(false);
+	}
+
+	const changeLayout = () => {
+		setIsLogin(!isLogin);
+		handleClear();
+	}
+
 	return (
 		<main className='flex-grow bg-[#FFF8DC]'>
 			{/* Div central para alternar entre Login e Cadastro */}
@@ -37,17 +51,19 @@ const Login = () => {
 				<div className="rounded-full bg-white shadow-lg flex flex-col cursor-pointer w-32 h-32 overflow-hidden z-30">
 					{/* Botão Login */}
 					<button
-						onClick={() => setIsLogin(true)}
+						onClick={changeLayout}
 						className={`w-full h-1/2 text-center font-bold ${isLogin ? 'bg-primary text-white' : 'bg-white text-primary'
 							} transition-colors duration-300`}
+						disabled={isLogin}
 					>
 						Login
 					</button>
 					{/* Botão Cadastro */}
 					<button
-						onClick={() => setIsLogin(false)}
+						onClick={changeLayout}
 						className={`w-full h-1/2 text-center font-bold ${!isLogin ? 'bg-primary text-white' : 'bg-white text-primary'
 							} transition-colors duration-300`}
+						disabled={!isLogin}
 					>
 						Cadastro
 					</button>
@@ -68,7 +84,7 @@ const Login = () => {
 									{/* Usuario */}
 									<div className="mb-4">
 										<input
-											className="appearance-none block w-full rounded py-3 px-4 mb-3 mt-1 leading-tight focus:outline-gray-400"
+											className="appearance-none block w-full rounded py-3 px-4 mb-3 mt-1 leading-tight text-primary focus:outline-gray-400"
 											id='email'
 											name='email'
 											type="text"
@@ -82,7 +98,7 @@ const Login = () => {
 									<div className="mb-6">
 										<div className='relative'>
 											<input
-												className="appearance-none block w-full rounded py-3 px-4 mb-3 mt-1 leading-tight focus:outline-gray-400"
+												className="appearance-none block w-full rounded py-3 px-4 mb-3 mt-1 leading-tight text-primary focus:outline-gray-400"
 												id='senha'
 												name='senha'
 												value={password}
@@ -155,7 +171,7 @@ const Login = () => {
 									{/* Celular */}
 									<div className="mb-4">
 										<input
-											className="appearance-none block w-full rounded py-3 px-4 mb-3 mt-1 leading-tight focus:outline-gray-400"
+											className="appearance-none block w-full rounded py-3 px-4 mb-3 mt-1 leading-tight text-primary focus:outline-gray-400"
 											id='phone'
 											name='phone'
 											type="text"
@@ -166,7 +182,7 @@ const Login = () => {
 									{/* Usuario */}
 									<div className="mb-4">
 										<input
-											className="appearance-none block w-full rounded py-3 px-4 mb-3 mt-1 leading-tight focus:outline-gray-400"
+											className="appearance-none block w-full rounded py-3 px-4 mb-3 mt-1 leading-tight text-primary focus:outline-gray-400"
 											id='email'
 											name='email'
 											type="text"
@@ -178,7 +194,7 @@ const Login = () => {
 									{/* Nome */}
 									<div className="mb-4">
 										<input
-											className="appearance-none block w-full rounded py-3 px-4 mb-3 mt-1 leading-tight focus:outline-gray-400"
+											className="appearance-none block w-full rounded py-3 px-4 mb-3 mt-1 leading-tight text-primary focus:outline-gray-400"
 											id='nome'
 											name='nome'
 											type="text"
@@ -190,7 +206,7 @@ const Login = () => {
 									<div className="mb-b">
 										<div className='relative'>
 											<input
-												className="appearance-none block w-full rounded py-3 px-4 mb-3 mt-1 leading-tight focus:outline-gray-400"
+												className="appearance-none block w-full rounded py-3 px-4 mb-3 mt-1 leading-tight text-primary focus:outline-gray-400"
 												id='senha'
 												name='senha'
 												value={password}
