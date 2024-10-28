@@ -1,17 +1,19 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { toast, ToastContainer } from 'react-toastify';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
 import { AuthProvider } from './contexts/auth';
-
+import useAuth from './hooks/useAuth';
 
 // Componentes
-import Navbar from './components/Navbar'; // Importando o Menu
-import Footer from './components/Footer'; // Importando o Footer
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import PrivateRoute from './components/PrivateRoute';
 
 // Paginas
 const Home = lazy(() => import('./pages/Home'));
+const Login = lazy(() => import('./pages/Login'));
 
 function App() {
   return (
@@ -27,7 +29,9 @@ function App() {
 
           {/* Rotas */}
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            
+            <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
           </Routes>
 
           {/* Rodapé */}
