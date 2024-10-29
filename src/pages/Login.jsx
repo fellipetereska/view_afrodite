@@ -52,7 +52,7 @@ const Login = () => {
 					{/* Botão Login */}
 					<button
 						onClick={changeLayout}
-						className={`w-full h-1/2 text-center font-bold ${isLogin ? 'bg-primary text-white' : 'bg-white text-primary'
+						className={`w-full h-1/2 text-center font-bold ${isLogin ? 'bg-primary text-creme' : 'bg-creme text-primary'
 							} transition-colors duration-300`}
 						disabled={isLogin}
 					>
@@ -61,7 +61,7 @@ const Login = () => {
 					{/* Botão Cadastro */}
 					<button
 						onClick={changeLayout}
-						className={`w-full h-1/2 text-center font-bold ${!isLogin ? 'bg-primary text-white' : 'bg-white text-primary'
+						className={`w-full h-1/2 text-center font-bold ${!isLogin ? 'bg-primary text-creme' : 'bg-creme text-primary'
 							} transition-colors duration-300`}
 						disabled={!isLogin}
 					>
