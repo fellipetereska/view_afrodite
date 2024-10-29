@@ -48,7 +48,7 @@ const Login = () => {
 		<main className='flex-grow bg-[#FFF8DC]'>
 			{/* Div central para alternar entre Login e Cadastro */}
 			<div className='absolute inset-0 flex justify-center items-center'>
-				<div className="rounded-full bg-white shadow-lg flex flex-col cursor-pointer w-32 h-32 overflow-hidden z-30">
+				<div className="rounded-full bg-white shadow-lg flex flex-col cursor-pointer w-40 h-40 overflow-hidden z-30">
 					{/* Botão Login */}
 					<button
 						onClick={changeLayout}
