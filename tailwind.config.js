@@ -12,6 +12,9 @@ module.exports = {
         primary: '#7B68EE', // Roxo
         creme: '#FFF8DC', // Bege
       }, 
+      height:{
+        '445' : '445px'
+      }
     }
   },
   fontFamily: {
