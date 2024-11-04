@@ -12,6 +12,13 @@ module.exports = {
         primary: '#7B68EE', // Roxo
         creme: '#FFF8DC', // Bege
       }, 
+      height:{
+        '445' : '445px'
+      },
+      boxShadow:{
+        'butao' : '3px -3px 0px 4px rgba(131,111,255,0.25)',
+        'card' : ' 0px 4px 4px 0px rgba(0,0,0,0.25)'
+      }
     }
   },
   fontFamily: {

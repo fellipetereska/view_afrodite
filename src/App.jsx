@@ -11,9 +11,11 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import PrivateRoute from './components/PrivateRoute';
 
+
 // Paginas
 const Home = lazy(() => import('./pages/Home'));
 const Login = lazy(() => import('./pages/Login'));
+const Agendamento = lazy(() => import('./pages/Agendamento'))
 
 function App() {
   return (
@@ -32,10 +34,11 @@ function App() {
             <Route path="/login" element={<Login />} />
             
             <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
+            <Route path='/agendamento' element={<Agendamento/>}/>
           </Routes>
 
           {/* Rodapé */}
-          <Footer />
+          {/* <Footer /> */}
         </Suspense>
       </Router>
 
