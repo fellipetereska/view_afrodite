@@ -18,7 +18,7 @@ const Navbar = () => {
         <ul className="flex gap-6 text-lg font-semibold justify-end w-1/2 px-14">
           <li><Link to="/login" className="hover:text-gray-200">Login</Link></li>
           <li><Link to="/" className="hover:text-gray-200">Início</Link></li>
-          <li><Link to="/" className="hover:text-gray-200">Agendar</Link></li>
+          <li><Link to="/agendamento" className="hover:text-gray-200">Agendar</Link></li>
         </ul>
 
         {/* Logo centralizada */}
