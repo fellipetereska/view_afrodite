@@ -11,6 +11,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import PrivateRoute from './components/PrivateRoute';
 
+import { Loading } from './components/Loading';
 
 // Paginas
 const Home = lazy(() => import('./pages/Home'));
@@ -25,7 +26,7 @@ function App() {
       <Router>
 
         {/* Carregamento Asincrono das paginas */}
-        <Suspense fallback={<p>Carregando...</p>}>
+        <Suspense fallback={<Loading />}>
 
           {/* Menu */}
           <Navbar />
@@ -40,7 +41,7 @@ function App() {
           </Routes>
 
           {/* Rodapé */}
-          {/* <Footer /> */}
+          <Footer />
         </Suspense>
       </Router>
 

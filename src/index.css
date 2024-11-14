@@ -10,3 +10,16 @@
 body {
   background-color: #FFF8DC;
 }
+
+body::-webkit-scrollbar {
+  width: 6px;
+  height: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #7B68EE;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #7B68EE;
+}
