@@ -9,7 +9,7 @@ const Footer = () => {
   }
 
   return (
-    <footer className=" text-gray-600 border-t border-gray-200 text-center p-3 fixed bottom-0 left-0 w-full">
+    <footer className=" text-gray-600 border-t border-gray-200 text-center p-3 sticky left-0 w-full mt-6">
       <p>&copy; {new Date().getFullYear()} Afrodite. Todos os direitos reservados.</p>
     </footer>
   );
