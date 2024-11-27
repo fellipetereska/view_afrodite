@@ -24,8 +24,8 @@ const Navbar = () => {
         <nav className="flex items-center gap-3">
           {/* Links à esquerda */}
           <ul className="flex gap-6 text-lg font-semibold justify-end w-1/2 px-14" onClick={() => setIsMenuOpen(false)}>
-            <li><Link to="/login" className="hover:text-gray-200">Serviços</Link></li>
-            <li><Link to="/" className="hover:text-gray-200">Profissionais</Link></li>
+            <li><Link to="/agendamento" className="hover:text-gray-200">Serviços</Link></li>
+            <li><Link to="/profissional" className="hover:text-gray-200">Profissionais</Link></li>
           </ul>
 
           {/* Logo centralizada */}
@@ -59,7 +59,7 @@ const Navbar = () => {
                       <p className='text-xs font-light'>Cliente</p>
                     </div>
                     <ul className='mb-2'>
-                      <li className="px-4 py-2 hover:bg-primary hover:text-creme cursor-pointer border-b border-t border-primary">Agendamentos</li>
+                      <li className="px-4 py-2 hover:bg-primary hover:text-creme cursor-pointer border-b border-t border-primary"><Link to="/agendamento">Agendamentos</Link></li>
                       <li className="px-4 py-2 hover:bg-primary hover:text-creme cursor-pointer border-b border-primary">Sua Conta</li>
                     </ul>
                     <div className='px-4 flex justify-end'>

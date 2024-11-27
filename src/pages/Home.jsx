@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import salao from '../media/imagemSalao.png';
 import card1 from '../media/cardInicial1.png';
@@ -114,6 +115,7 @@ const Home = () => {
         <div className='mt-10 w-full'>
           <div className="grid grid-cols-5 gap-5 w-5/6 mx-auto">
             {/* Card 1 */}
+            <Link to="/profissional" >
             <div className="cursor-pointer hover:bg-gray-50 hover:bg-opacity-60 rounded-lg relative overflow-hidden">
               <div className='shadow-md border hover:border-none rounded-md py-4 px-6'>
                 <div>
@@ -124,7 +126,9 @@ const Home = () => {
                 </div>
               </div>
             </div>
+            </Link>
             {/* Card 2 */}
+            <Link to="/profissional" >
             <div className="cursor-pointer hover:bg-gray-50 hover:bg-opacity-60 rounded-lg relative overflow-hidden">
               <div className='shadow-md border hover:border-none rounded-md py-4 px-6'>
                 <div>
@@ -135,7 +139,9 @@ const Home = () => {
                 </div>
               </div>
             </div>
+            </Link>
             {/* Card 3 */}
+            <Link to="/profissional" >
             <div className="cursor-pointer hover:bg-gray-50 hover:bg-opacity-60 rounded-lg relative overflow-hidden">
               <div className='shadow-md border hover:border-none rounded-md py-4 px-6'>
                 <div>
@@ -146,7 +152,9 @@ const Home = () => {
                 </div>
               </div>
             </div>
+            </Link>
             {/* Card 4 */}
+            <Link to="/profissional" >
             <div className="cursor-pointer hover:bg-gray-50 hover:bg-opacity-60 rounded-lg relative overflow-hidden">
               <div className='shadow-md border hover:border-none rounded-md py-4 px-6'>
                 <div>
@@ -157,7 +165,9 @@ const Home = () => {
                 </div>
               </div>
             </div>
+            </Link> 
             {/* Card 5 */}
+            <Link to="/profissional">
             <div className="cursor-pointer hover:bg-gray-50 hover:bg-opacity-60 rounded-lg relative overflow-hidden">
               <div className='shadow-md border hover:border-none rounded-md py-4 px-6'>
                 <div>
@@ -168,6 +178,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
+            </Link>
           </div>
         </div>
       </div>

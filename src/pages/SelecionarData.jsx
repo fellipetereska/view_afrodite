@@ -1,6 +1,7 @@
 import React from "react";
 import { MdOutlineAccessTime } from "react-icons/md";
 import { FaArrowLeft } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 
 
@@ -11,7 +12,7 @@ const SelecionarData = () => {
 
         {/* Foto/Dados */}
         <div className="flex items-center gap-6 px-6 py-4">
-          <FaArrowLeft className="text-gray-400 hover:text-gray-700 cursor-pointer" />
+          <Link to="/profissional"><FaArrowLeft className="text-gray-400 hover:text-gray-700 cursor-pointer" /></Link>
 
           {/* Foto */}
           <div className="w-20 h-20 bg-gray-300 rounded-full"></div>
